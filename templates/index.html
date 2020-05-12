@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>BMI CACULATOR </title></head>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' typr='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arino' rel='stylesheet' typr='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hindi:300' rel='stylesheet' typr='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' typr='text/css'>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}}">
+ <style>
+    /* CSS code for button */
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: red;
+  text-align:right;
+}
+
+    body {
+  background-image: url('../static/images/1.jpg');
+      background-repeat: no-repeat;
+      height:auto;
+      width:100%;
+      background-position:center;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+</style>
+</head>
+<body>
+
+
+
+
+<div class="login">
+</font>
+<center>
+<font color="white">
+<h1>BMI CALCULATOR</h1>
+</font>
+
+<form action="{{url_for('predict')}}"method="post">
+<font color="orange">
+<h1>Enter the details</h1>
+</font>
+<input type="text" name="height" placeholder="Height(cm)" required="required"/>
+<br>
+<br>
+<input type="text" name="weight" placeholder="Weight(kg)" required="required"/>
+<br>
+<br>
+<button type="submit" class ="btn btn-primary btn-block btn-large">Predict</button>
+<br>
+<br>
+<br>
+</form>
+<br>
+<h2>
+<font color="yellow">
+{{prediction_text}}
+</font>
+</h2>
+</div>
+</center>
+<br>
+<br>
+<br>
+<font color="white">
+<ul> 
+<h3>
+Piyush Maurya<br>
+798445887
+<br>
+</h3>
+<li>If there is any Problem Please Refresh this Page then and Enter the Correct Details:</li>
+</ul>
+
+</body>
+
+</html>  
+  
+  
